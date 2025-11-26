@@ -66,14 +66,6 @@ export default async function({ host, patternMatch, params, authType }) {
             });
         }
 
-        // youtubeHLS will be fully removed in the future
-        let youtubeHLS = params.youtubeHLS;
-        const hlsEnv = env.enableDeprecatedYoutubeHls;
-
-        if (hlsEnv === "never" || (hlsEnv === "key" && authType !== "key")) {
-            youtubeHLS = false;
-        }
-
         const subtitleLang =
             params.subtitleLang !== "none" ? params.subtitleLang : undefined;
 
@@ -120,7 +112,7 @@ export default async function({ host, patternMatch, params, authType }) {
                     isAudioOnly,
                     isAudioMuted,
                     dubLang: params.youtubeDubLang,
-                    youtubeHLS,
+                    youtubeHLS: false,
                     subtitleLang,
                 }
 

@@ -45,11 +45,6 @@ setup_api() {
     API_PID=$!
 }
 
-setup_web() {
-    pnpm run --prefix web check
-    pnpm run --prefix web build
-}
-
 cd "$(git rev-parse --show-toplevel)"
 pnpm install --frozen-lockfile
 
@@ -58,10 +53,8 @@ if [ "$1" = "api" ]; then
     test_api
     [ "$API_PID" != "" ] \
         && kill "$API_PID"
-elif [ "$1" = "web" ]; then
-    setup_web
 else
-    echo "usage: $0 <api/web>" >&2
+    echo "usage: $0 <api>" >&2
     exit 1
 fi
 

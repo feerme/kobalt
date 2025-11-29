@@ -1,7 +1,7 @@
 <div align="center">
     <br/>
     <p>
-        <img src="web/static/favicon.png" title="kobalt" alt="kobalt logo" width="100" />
+        <img src="https://github.com/user-attachments/assets/ffb32291-713b-4512-8b31-ca85caa8f65f" title="kobalt" alt="kobalt logo" width="100" />
     </p>
     <p>
         best way to save what you love
